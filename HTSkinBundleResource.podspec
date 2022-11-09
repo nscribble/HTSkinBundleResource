@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HTSkinBundleResource'
-  s.version          = '0.1.0'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of HTSkinBundleResource.'
 
 # This description is used to generate tags and improve search results.
@@ -31,6 +31,35 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'HTSkinBundleResource/Classes/**/*'
+  
+  s.default_subspec = 'App1'
+  
+  s.subspec 'App1' do |sp|
+    sp.resource_bundles = {
+      'Skin' => [
+            'HTSkinBundleResource/Assets/Common/*.{xib,png,xcassets,svg,ttf,json,xml,plist,mp3}',
+            'HTSkinBundleResource/Assets/Common/Images/**/*.{png,jpg,svg}',
+            'HTSkinBundleResource/Assets/App1/*.{xib,png,xcassets,ttf,json,xml,plist}',
+            'HTSkinBundleResource/Assets/App1/Images/**/*.{png,jpg,svg}',
+            'HTSkinBundleResource/Assets/App1/LottieResource'
+        ]
+    }
+  end
+
+  s.subspec 'App2' do |sp|
+    sp.resource_bundles = {
+      'Skin' => [
+            'HTSkinBundleResource/Assets/Common/*.{xib,png,xcassets,svg,ttf,json,xml,plist,mp3}',
+            'HTSkinBundleResource/Assets/Common/Images/**/*.{png,jpg,svg}',
+            'HTSkinBundleResource/Assets/App2/*.{xib,png,xcassets,svg,ttf,json,xml,plist,mp3}',
+            'HTSkinBundleResource/Assets/App2/Images/**/*.{png,jpg,svg}',
+            'HTSkinBundleResource/Assets/App2/LottieResource'
+        ]
+    }
+  end
+  
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   # s.resource_bundles = {
   #   'HTSkinBundleResource' => ['HTSkinBundleResource/Assets/*.png']

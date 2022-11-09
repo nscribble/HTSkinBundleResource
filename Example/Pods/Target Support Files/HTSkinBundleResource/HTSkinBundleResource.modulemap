@@ -1,0 +1,6 @@
+framework module HTSkinBundleResource {
+  umbrella header "HTSkinBundleResource-umbrella.h"
+
+  export *
+  module * { export * }
+}

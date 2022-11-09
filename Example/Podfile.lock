@@ -1,0 +1,18 @@
+PODS:
+  - HTSkinBundleResource (0.1.4):
+    - HTSkinBundleResource/App1 (= 0.1.4)
+  - HTSkinBundleResource/App1 (0.1.4)
+
+DEPENDENCIES:
+  - HTSkinBundleResource (from `../`)
+
+EXTERNAL SOURCES:
+  HTSkinBundleResource:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HTSkinBundleResource: 13907eae360c238e927ef52dcad2700fcb2ba3c8
+
+PODFILE CHECKSUM: d4d2d539f208feceaf3761d743fd1c57b293394b
+
+COCOAPODS: 1.11.3
