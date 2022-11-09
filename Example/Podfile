@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'HTSkinBundleResource_Example' do
+  pod 'HTSkinBundleResource', :path => '../'
+
+  target 'HTSkinBundleResource_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
