@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HTSkinBundleResource'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of HTSkinBundleResource.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'HTSkinBundleResource/Classes/**/*'
+  # s.source_files = 'HTSkinBundleResource/Classes/**/*'
   
   s.default_subspec = 'App1'
   
